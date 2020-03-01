@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     
     <meta charset="utf-8">
-    <title>JSDoc: userProfile</title>
+    <title>JSDoc: util/PrivateRoute.js</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -81,404 +83,53 @@
             <div class="column is-9-desktop">
                 <div class="content" id="main-content-wrapper">
                     <header class="page-title">
-                        <p>Class</p>
-                        <h1>userProfile</h1>
+                        <p>Source</p>
+                        <h1>util/PrivateRoute.js</h1>
                     </header>
                     
                     
 
 
 
-
-<section>
-
-<header>
-    
-        <h2><span class="attribs"><span class="type-signature"></span></span>userProfile<span class="signature">()</span><span class="type-signature"></span></h2>
-        
-            <div class="class-description"><p>Na této stránce se zobrazuje profil daného uživatele.</p></div>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class='vertical-section'>
-                <h3 class="title"><span>Constructor</span></h3>
-                <div class="members">
-                    <div class="member">
-
-
-    
-    <h4 class="name" id="userProfile">
-        <a class="href-link" href="#userProfile">#</a>
-        
-        <span class="code-name">
-            
-                new userProfile<span class="signature">()</span><span class="type-signature"></span>
-            
-        </span>
-    </h4>
-    
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="pages_userProfile.js.html" class="button">View Source</a>
-            <span>
-                <a href="pages_userProfile.js.html">pages/userProfile.js</a>, <a href="pages_userProfile.js.html#line19">line 19</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-    <div class="method-parameter columns">
-        <div class="column is-2"><label>Requires:</label></div>
-        <div class="column is-10">
-            <ul>
-                <li><a href="module-userActions.html#~getUserDataByUsername">module:userActions~getUserDataByUsername</a></li>
-            
-                <li><a href="module-userActions.html#~clearUserData">module:userActions~clearUserData</a></li>
-            
-                <li><a href="module-uiStatusActions.html#~clearStatus">module:uiStatusActions~clearStatus</a></li>
-            
-                <li><a href="module-store.html#~reducers">module:store~reducers.uiStatus</a></li>
-            
-                <li><a href="module-store.html#~reducers">module:store~reducers.user</a></li>
-            </ul>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-                </div>
-            </div>
-        
-    
-    </div>
-    
-    
-        <h3 class="subsection-title">Extends</h3>
-
-        
-
-
-    <ul>
-        <li>Component</li>
-    </ul>
-
-
-    
-
-    
-        <h3 class="subsection-title">Requires</h3>
-
-        <ul>
-            <li><a href="module-userActions.html#~getUserDataByUsername">module:userActions~getUserDataByUsername</a></li>
-        
-            <li><a href="module-userActions.html#~clearUserData">module:userActions~clearUserData</a></li>
-        
-            <li><a href="module-uiStatusActions.html#~clearStatus">module:uiStatusActions~clearStatus</a></li>
-        
-            <li><a href="module-store.html#~reducers">module:store~reducers.uiStatus</a></li>
-        
-            <li><a href="module-store.html#~reducers">module:store~reducers.user</a></li>
-        </ul>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class='vertical-section'>
-            <h3 class="title"><span>Methods</span></h3>
-            <div class="members">
-            
-                <div class="member">
-
-
-    
-    <h4 class="name" id=".componentDidMount">
-        <a class="href-link" href="#.componentDidMount">#</a>
-        
-            
-                <span class='tag'>static</span>
-            
-        
-        <span class="code-name">
-            
-                componentDidMount<span class="signature">()</span><span class="type-signature"></span>
-            
-        </span>
-    </h4>
-    
-
-    
-    
-    <div class="description">
-        <p>Zkontroluje, zda se má zobrazit profil přihlášeného uživatele, nebo profil jiného uživatele. Pokud jde o jiného uživatele, stáhne jeho data.</p>
-    </div>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="pages_userProfile.js.html" class="button">View Source</a>
-            <span>
-                <a href="pages_userProfile.js.html">pages/userProfile.js</a>, <a href="pages_userProfile.js.html#line37">line 37</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-            
-                <div class="member">
-
-
-    
-    <h4 class="name" id=".componentWillUnmount">
-        <a class="href-link" href="#.componentWillUnmount">#</a>
-        
-            
-                <span class='tag'>static</span>
-            
-        
-        <span class="code-name">
-            
-                componentWillUnmount<span class="signature">()</span><span class="type-signature"></span>
-            
-        </span>
-    </h4>
-    
-
-    
-    
-    <div class="description">
-        <p>Vymaže status aplikace a informace o profilu daného uživatele z reduceru.</p>
-    </div>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="pages_userProfile.js.html" class="button">View Source</a>
-            <span>
-                <a href="pages_userProfile.js.html">pages/userProfile.js</a>, <a href="pages_userProfile.js.html#line54">line 54</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-            
-            </div>
-        </div>
-    
-
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from "react";
+import { Route, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+
+/**
+ * @module PrivateRoute
+ * @category util
+ * @description Toto je React Route pro stránky, na kterých je třeba, aby byl uživatel přihlášen. Pokud není přihlášen, bude přesměrován na /login.
+ */
+
+/**
+ * @function PrivateRoute
+ * @description Toto je React Route pro stránky, na kterých je třeba, aby byl uživatel přihlášen. Pokud není přihlášen, bude přesměrován na /login.
+ * @param {Object} component - Komponent, který chce uživatel zobrazit.
+ * @param {boolean} authenticated - Informace, zda je uživatel přihlášen či ne.
+ * @requires {@link module:store~reducers module:store~reducers.user}
+ */
+
+const PrivateRoute = ({ component: Component, authenticated, ...rest }) => (
+  &lt;Route {...rest} render={props => (authenticated === true ? &lt;Component {...props} /> : &lt;Redirect to="/login">&lt;/Redirect>)} />
+);
+
+PrivateRoute.propTypes = {
+  user: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  user: state.user,
+  authenticated: state.user.authenticated
+});
+
+export default connect(mapStateToProps)(PrivateRoute);
+</code></pre>
+        </article>
+    </section>
 
 
 
@@ -491,7 +142,7 @@
 
 <footer class="footer">
     <div class="content has-text-centered">
-        <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Sun Mar 01 2020 14:25:01 GMT+0100 (GMT+01:00)</p>
+        <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Sun Mar 01 2020 14:25:00 GMT+0100 (GMT+01:00)</p>
         <p class="sidebar-created-by">
             <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
             <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
