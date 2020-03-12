@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="favicon.ico" />
-    <title>Simple Flashcards Docs: editColReducer</title>
+    <title>Simple Flashcards Docs: Global</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -81,7 +81,12 @@
           <div class="sidebar">
             <nav>
               <h2><a href="index.html">Home</a></h2>
-              <div class="category"></div>
+              <div class="category">
+                <h3>Global</h3>
+                <ul>
+                  <li><a href="global.html#tokenExpirationMiddleware">tokenExpirationMiddleware</a></li>
+                </ul>
+              </div>
               <div class="category">
                 <h2>Components</h2>
                 <h3>Classes</h3>
@@ -173,149 +178,34 @@
         <div class="column is-9-desktop">
           <div class="content" id="main-content-wrapper">
             <header class="page-title">
-              <p>Module</p>
-              <h1>editColReducer</h1>
+              <p>Title</p>
+              <h1>Global</h1>
             </header>
 
             <section>
-              <header></header>
+              <header>
+                <h2></h2>
+              </header>
 
               <article>
                 <div class="container-overview">
-                  <div class="description"><p>Uchovává data o upravované kolekci.</p></div>
-
-                  <dl class="details">
-                    <p class="tag-source">
-                      <a href="redux_reducers_editColReducer.js.html" class="button">View Source</a>
-                      <span>
-                        <a href="redux_reducers_editColReducer.js.html">redux/reducers/editColReducer.js</a>,
-                        <a href="redux_reducers_editColReducer.js.html#line3">line 3</a>
-                      </span>
-                    </p>
-                  </dl>
-                </div>
-
-                <div class="vertical-section">
-                  <h3 class="title"><span>Members</span></h3>
-                  <div class="members">
-                    <div class="member">
-                      <span class="method-parameter is-pulled-right">
-                        <label>Type:</label>
-
-                        <span class="param-type">Object</span>
-                      </span>
-
-                      <h4 class="name" id="~initialState">
-                        <a class="href-link" href="#~initialState">#</a>
-
-                        <span class="tag">inner</span>
-
-                        <span class="tag">constant</span>
-
-                        <span class="code-name">
-                          initialState
-                        </span>
-                      </h4>
-
-                      <div class="description">
-                        <p>Původní stav reduceru.</p>
-                      </div>
-
-                      <h5 class="subsection-title">Properties:</h5>
-
-                      <table class="props">
-                        <thead>
-                          <tr>
-                            <th>Name</th>
-
-                            <th>Type</th>
-
-                            <th class="last">Description</th>
-                          </tr>
-                        </thead>
-
-                        <tbody>
-                          <tr class="deep-level-0">
-                            <td class="name"><code>initialState</code></td>
-
-                            <td class="type">
-                              <span class="param-type">Object</span>
-                            </td>
-
-                            <td class="description last"><p>Původní stav reduceru.</p></td>
-                          </tr>
-
-                          <tr class="deep-level-1">
-                            <td class="name"><code>colName</code></td>
-
-                            <td class="type">
-                              <span class="param-type">string</span>
-                            </td>
-
-                            <td class="description last"><p>Uchovává název kolekce.</p></td>
-                          </tr>
-
-                          <tr class="deep-level-1">
-                            <td class="name"><code>colDescription</code></td>
-
-                            <td class="type">
-                              <span class="param-type">string</span>
-                            </td>
-
-                            <td class="description last"><p>Uchovává popis kolekce.</p></td>
-                          </tr>
-
-                          <tr class="deep-level-1">
-                            <td class="name"><code>deckArray</code></td>
-
-                            <td class="type">
-                              <span class="param-type">Array.&lt;Object></span>
-                            </td>
-
-                            <td class="description last"><p>Uchovává balíčky obsažené v kolekci.</p></td>
-                          </tr>
-
-                          <tr class="deep-level-1">
-                            <td class="name"><code>private</code></td>
-
-                            <td class="type">
-                              <span class="param-type">boolean</span>
-                            </td>
-
-                            <td class="description last"><p>Uchovává informaci, zda je balíček veřejný či soukromý.</p></td>
-                          </tr>
-                        </tbody>
-                      </table>
-
-                      <dl class="details">
-                        <p class="tag-source">
-                          <a href="redux_reducers_editColReducer.js.html" class="button">View Source</a>
-                          <span>
-                            <a href="redux_reducers_editColReducer.js.html">redux/reducers/editColReducer.js</a>,
-                            <a href="redux_reducers_editColReducer.js.html#line18">line 18</a>
-                          </span>
-                        </p>
-                      </dl>
-                    </div>
-                  </div>
+                  <dl class="details"></dl>
                 </div>
 
                 <div class="vertical-section">
                   <h3 class="title"><span>Methods</span></h3>
                   <div class="members">
                     <div class="member">
-                      <h4 class="name" id="~function">
-                        <a class="href-link" href="#~function">#</a>
-
-                        <span class="tag">inner</span>
+                      <h4 class="name" id="tokenExpirationMiddleware">
+                        <a class="href-link" href="#tokenExpirationMiddleware">#</a>
 
                         <span class="code-name">
-                          function<span class="signature">(state, action)</span><span class="type-signature"> &rarr; {Object}</span>
+                          tokenExpirationMiddleware<span class="signature">(store, next, action)</span><span class="type-signature"></span>
                         </span>
                       </h4>
 
                       <div class="description">
-                        <p>Mění stav reduceru.</p>
+                        <p>Store middleware, který kontroluje, jestli uživateli neskončila platnost tokenu. Pokud platnost skončila, uživatele odhlásí.</p>
                       </div>
 
                       <h5>Parameters:</h5>
@@ -333,13 +223,23 @@
 
                         <tbody>
                           <tr class="deep-level-0">
-                            <td class="name"><code>state</code></td>
+                            <td class="name"><code>store</code></td>
 
                             <td class="type">
                               <span class="param-type">Object</span>
                             </td>
 
-                            <td class="description last"><p>Stav reduceru.</p></td>
+                            <td class="description last"><p>Store aplikace.</p></td>
+                          </tr>
+
+                          <tr class="deep-level-0">
+                            <td class="name"><code>next</code></td>
+
+                            <td class="type">
+                              <span class="param-type">Object</span>
+                            </td>
+
+                            <td class="description last"><p>Funkce, která spustí pokračování zpracovávání dané akce.</p></td>
                           </tr>
 
                           <tr class="deep-level-0">
@@ -349,35 +249,17 @@
                               <span class="param-type">Object</span>
                             </td>
 
-                            <td class="description last"><p>Akce, která vyvolává změnu v reduceru.</p></td>
+                            <td class="description last"><p>Akce, která vyvolala změnu ve store.</p></td>
                           </tr>
                         </tbody>
                       </table>
 
                       <dl class="details">
                         <p class="tag-source">
-                          <a href="redux_reducers_editColReducer.js.html" class="button">View Source</a>
-                          <span>
-                            <a href="redux_reducers_editColReducer.js.html">redux/reducers/editColReducer.js</a>,
-                            <a href="redux_reducers_editColReducer.js.html#line25">line 25</a>
-                          </span>
+                          <a href="redux_store.js.html" class="button">View Source</a>
+                          <span> <a href="redux_store.js.html">redux/store.js</a>, <a href="redux_store.js.html#line18">line 18</a> </span>
                         </p>
                       </dl>
-
-                      <div class="columns method-parameter">
-                        <div class="column is-2"><label>Returns:</label></div>
-                        <div class="column is-10">
-                          <div class="columns">
-                            <div class="param-desc column is-7"><p>Nový stav reduceru.</p></div>
-
-                            <div class="column is-5 has-text-left">
-                              <label>Type: </label>
-
-                              <span class="param-type">Object</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -390,7 +272,7 @@
 
     <footer class="footer">
       <div class="content has-text-centered">
-        <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Mar 12 2020 10:05:59 GMT+0100 (GMT+01:00)</p>
+        <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Wed Mar 11 2020 10:16:13 GMT+0100 (GMT+01:00)</p>
         <p class="sidebar-created-by">
           <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
           <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
