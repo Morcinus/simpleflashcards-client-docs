@@ -176,7 +176,7 @@
               <h1>Home</h1>
             </header>
         
-            <p>Tato dokumentace je zaměřena na samotnou webovou aplikaci, popis jednotlivých komponentů a funkcí, které komunikují s API serveru.</p>
+            <p>Tato dokumentace je zaměřena na samotnou webovou aplikaci a popis jednotlivých komponentů a funkcí, které komunikují s API serveru. Samotná aplikace běží na hostingu služby <a href="https://firebase.google.com/docs/hosting">Firebase Hosting</a>.</p>
         
             <h2>Rozdělení Projektu Simpleflashcards:</h2>
             <p>Projekt je rozdělen do dvou částí:</p>
@@ -189,6 +189,78 @@
               <a href="https://morcinus.github.io/simpleflashcards-fb-functions-docs/">zde</a>.
             </p>
         
+            <h2>Struktura dokumentace</h2>
+            <p>Projekt je rozdělen do těchto skupin:</p>
+            <ul>
+              <li>Components - Zde můžete najít jednotlivé komponenty této aplikace.</li>
+              <ul>
+                <li><a href="CollectionDecks.html">CollectionDecks</a></li>
+                <li><a href="CollectionDialog.html">CollectionDialog</a></li>
+                <li><a href="CollectionInfo.html">CollectionInfo</a></li>
+                <li><a href="ColTable.html">ColTable</a></li>
+                <li><a href="DeckCards.html">DeckCards</a></li>
+                <li><a href="DeckInfo.html">DeckInfo</a></li>
+                <li><a href="DeckTable.html">DeckTable</a></li>
+                <li><a href="Navbar.html">Navbar</a></li>
+                <li><a href="PinnedCollections.html">PinnedCollections</a></li>
+                <li><a href="PinnedDecks.html">PinnedDecks</a></li>
+                <li><a href="UserCollections.html">UserCollections</a></li>
+                <li><a href="UserDecks.html">UserDecks</a></li>
+              </ul>
+              <li>Pages - Zde můžete najít komponenty aplikace, které tvoří dané stránky. K tomu využívají komponenty ze složky components.</li>
+              <ul>
+                <li><a href="collection.html">collection</a></li>
+                <li><a href="createDeck.html">createDeck</a></li>
+                <li><a href="deck.html">deck</a></li>
+                <li><a href="editCollection.html">editCollection</a></li>
+                <li><a href="editDeck.html">editDeck</a></li>
+                <li><a href="home.html">home</a></li>
+                <li><a href="login.html">login</a></li>
+                <li><a href="settings.html">settings</a></li>
+                <li><a href="signup.html">signup</a></li>
+                <li><a href="studyCollection.html">studyCollection</a></li>
+                <li><a href="studyDeck.html">studyDeck</a></li>
+                <li><a href="userProfile.html">userProfile</a></li>
+              </ul>
+              <li>ReduxActions - Zde můžete najít veškeré funkce, které komunikují s API serveru a s Redux reducery (čímž mění hodnoty ve Redux store).</li>
+              <ul>
+                <li><a href="module-colStudyActions.html">colStudyActions</a></li>
+                <li><a href="module-colUiActions.html">colUiActions</a></li>
+                <li><a href="module-createDeckActions.html">createDeckActions</a></li>
+                <li><a href="module-deckStudyActions.html">deckStudyActions</a></li>
+                <li><a href="module-deckUiActions.html">deckUiActions</a></li>
+                <li><a href="module-editColActions.html">editColActions</a></li>
+                <li><a href="module-editDeckActions.html">editDeckActions</a></li>
+                <li><a href="module-uiStatusActions.html">uiStatusActions</a></li>
+                <li><a href="module-userActions.html">userActions</a></li>
+              </ul>
+              <li>ReduxReducers - Zde můžete najít všechny Redux reducery.</li>
+              <ul>
+                <li><a href="module-colStudyReducer.html">colStudyReducer</a></li>
+                <li><a href="module-colUiReducer.html">colUiReducer</a></li>
+                <li><a href="module-createDeckReducer.html">createDeckReducer</a></li>
+                <li><a href="module-deckStudyReducer.html">deckStudyReducer</a></li>
+                <li><a href="module-deckUiReducer.html">deckUiReducer</a></li>
+                <li><a href="module-editColReducer.html">editColReducer</a></li>
+                <li><a href="module-editDeckReducer.html">editDeckReducer</a></li>
+                <li><a href="module-uiStatusReducer.html">uiStatusReducer</a></li>
+                <li><a href="module-userReducer.html">userReducer</a></li>
+              </ul>
+              <li>Util - Zde můžete najít Javascriptové moduly, které jsou používány ostatními částmi aplikace.</li>
+              <ul>
+                <li><a href="module-AuthRoute.html">AuthRoute</a></li>
+                <li><a href="module-functions.html">functions</a></li>
+                <li><a href="module-other.html">other</a></li>
+                <li><a href="module-PrivateRoute.html">PrivateRoute</a></li>
+                <li><a href="module-theme.html">theme</a></li>
+              </ul>
+              <li>Ostatní - Zde jsou ostatní moduly aplikace.</li>
+              <ul>
+                <li><a href="module-store.html">store</a></li>
+                <li><a href="module-types.html">types</a></li>
+              </ul>
+            </ul>
+        
             <h2>Aplikace</h2>
             <p>
               Tento projekt je vytvořen pomocí těchto nejpodstatnějších knihoven: <a href="https://reactjs.org/">React</a>, <a href="https://redux.js.org/">Redux</a>,
@@ -196,31 +268,25 @@
             </p>
         
             <h4>React</h4>
-            <p>Aplikace je sestavena z jednotlivých komponentů. Popis každého komponentu aplikace můžete najít v této dokumentaci.</p>
+            <p>Aplikace je sestavena z jednotlivých komponentů. Popis každého komponentu aplikace můžete najít v této dokumentaci v sekci Pages nebo Components.</p>
         
             <h4>Redux</h4>
             <p>
-              Tato knihovna je klíčovou součástí této aplikace. Umožňuje přehledné předávání informací mezi danými komponenty aplikace. Díky této knihovně je vytvořen
+              Tato knihovna je klíčovou součástí aplikace. Umožňuje přehledné předávání informací mezi danými komponenty aplikace. Díky této knihovně je vytvořen
               tzv. store. Na tomto místě jsou uložena data aplikace. Když potřebuje např. nějaký komponent tato data získat, stačí mu přistoupit do storu a nemusí je
-              tak získávat od ostatních komponentů.
+              tak získávat od ostatních komponentů. Jednotlivé funkce můžete najít v této dokumentaci v sekci ReduxActions a ReduxReducers.
             </p>
         
             <h4>Axios</h4>
-            <p>Axios je knihovna, která zajišťuje komunikaci mezi klientem a serverem. Využívají ji funkce této aplikace pro komunikaci s API serveru.</p>
+            <p>Axios je knihovna, která zajišťuje komunikaci mezi klientem a serverem. Využívají ji funkce této aplikace pro komunikaci s API serveru. Tyto funkce můžete najít v sekci ReduxActions.</p>
         
             <h4>Material UI</h4>
             <p>Samotný vzhled aplikace je zajištěn pomocí knihovny Material UI. Tato knihovna umožňuje rychlé a přehledné vytváření komponentů s jednotným vzhledem.</p>
         
-            <h2>Struktura dokumentace</h2>
-            <p>Projekt je rozdělen do těchto skupin:</p>
-            <ul>
-              <li>Components - Zde můžete najít jednotlivé komponenty této aplikace.</li>
-              <li>Pages - Zde můžete najít komponenty aplikace, které tvoří danou stránku. K tomu využívají komponenty se složky components.</li>
-              <li>ReduxActions - Zde můžete najít veškeré funkce, které komunikují s API serveru a s Redux reducery (čímž mění hodnoty ve Redux store).</li>
-              <li>ReduxReducers - Zde můžete najít všechny Redux Reducery.</li>
-              <li>Util - Zde můžete najít Javascriptové moduly, které jsou používány ostatními částmi aplikace.</li>
-              <li>Ostatní</li>
-            </ul>
+            <h2>Instalace a úprava aplikace</h2>
+            <p>
+              Pro vlastní úpravu aplikace stačí stáhnout složku <a href="https://github.com/Morcinus/SimpleFlashCards/tree/master/simpleflashcards-client">simpleflashcards-client</a> z Githubu. V té je pak třeba spustit příkaz <code>npm install</code>. Pro spuštění aplikace lokálně se pak dá použít příkaz <code>npm start</code> a pro sestavení aplikace příkaz <code>npm run build</code>.
+            </p>
         
             <h2>Použité knihovny:</h2>
             <ul>
@@ -242,6 +308,7 @@
             </ul>
           </div>
         </div>
+        
         
       </div>
     </div>
