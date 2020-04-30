@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="favicon.ico" />
-    <title>Simple Flashcards Docs: redux/reducers/createDeckReducer.js</title>
+    <title>Simple Flashcards Docs: GlobalErrorAlert</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -174,73 +174,104 @@
         <div class="column is-9-desktop">
           <div class="content" id="main-content-wrapper">
             <header class="page-title">
-              <p>Source</p>
-              <h1>redux/reducers/createDeckReducer.js</h1>
+              <p>Class</p>
+              <h1>GlobalErrorAlert</h1>
             </header>
 
             <section>
+              <header>
+                <h2>
+                  <span class="attribs"><span class="type-signature"></span></span>GlobalErrorAlert<span class="signature">()</span
+                  ><span class="type-signature"></span>
+                </h2>
+
+                <div class="class-description">
+                  <p>
+                    Tento komponent zobrazuje vyskakovací okno s univerzální errorovou hláškou, pokud v aplikaci nastane nečekaná chyba, která není zachycena
+                    jiným komponentem.
+                  </p>
+                </div>
+              </header>
+
               <article>
-                <pre class="prettyprint source linenums"><code>import { UPDATE_DECK_DATA, DELETE_DECK_DATA } from "../types";
+                <div class="container-overview">
+                  <div class="vertical-section">
+                    <h3 class="title"><span>Constructor</span></h3>
+                    <div class="members">
+                      <div class="member">
+                        <h4 class="name" id="GlobalErrorAlert">
+                          <a class="href-link" href="#GlobalErrorAlert">#</a>
 
-/**
- * @module createDeckReducer
- * @category ReduxReducers
- * @description Uchovává data o vytvářeném balíčku.
- */
+                          <span class="code-name"> new GlobalErrorAlert<span class="signature">()</span><span class="type-signature"></span> </span>
+                        </h4>
 
-/**
- * @type {Object} initialState
- * @description Původní stav reduceru.
- * @property {Object} initialState - Původní stav reduceru.
- * @property {string} initialState.deckName - Uchovává název balíčku.
- * @property {string} initialState.deckDescription - Uchovává popis balíčku.
- * @property {Object} initialState.deckImage - Uchovává obrázek balíčku.
- * @property {Array&lt;Object>} initialState.deckCards - Uchovává karty balíčku.
- * @property {string} initialState.imageUrl - Uchovává adresu obrázku balíčku.
- * @property {boolean} initialState.private - Uchovává informaci, zda je balíček veřejný či soukromý.
- */
-const initialState = {
-  deckName: "",
-  deckDescription: "",
-  deckImage: null,
-  deckCards: [],
-  imageUrl: null,
-  private: false
-};
+                        <dl class="details">
+                          <p class="tag-source">
+                            <a href="components_GlobalErrorAlert.js.html" class="button">View Source</a>
+                            <span>
+                              <a href="components_GlobalErrorAlert.js.html">components/GlobalErrorAlert.js</a>,
+                              <a href="components_GlobalErrorAlert.js.html#line12">line 12</a>
+                            </span>
+                          </p>
+                        </dl>
 
-/**
- * @function function
- * @description Mění stav reduceru.
- * @param {Object} state - Stav reduceru.
- * @param {Object} action - Akce, která vyvolává změnu v reduceru.
- * @returns {Object} Nový stav reduceru.
- */
-export default function(state = initialState, action) {
-  switch (action.type) {
-    case UPDATE_DECK_DATA:
-      return {
-        ...state,
-        deckName: action.payload.deckName,
-        deckDescription: action.payload.deckDescription,
-        deckImage: action.payload.deckImage,
-        deckCards: action.payload.deckCards,
-        imageUrl: action.payload.imageUrl,
-        private: action.payload.private
-      };
-    case DELETE_DECK_DATA:
-      return {
-        deckName: "",
-        deckDescription: "",
-        deckImage: null,
-        deckCards: [],
-        imageUrl: null,
-        private: false
-      };
-    default:
-      return state;
-  }
-}
-</code></pre>
+                        <div class="method-parameter columns">
+                          <div class="column is-2"><label>Requires:</label></div>
+                          <div class="column is-10">
+                            <ul>
+                              <li><a href="module-uiStatusActions.html#~closeErrorAlert">module:uiStatusActions~closeErrorAlert</a></li>
+
+                              <li><a href="module-store.html#~reducers">module:store~reducers.uiStatus</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 class="subsection-title">Extends</h3>
+
+                <ul>
+                  <li>Component</li>
+                </ul>
+
+                <h3 class="subsection-title">Requires</h3>
+
+                <ul>
+                  <li><a href="module-uiStatusActions.html#~closeErrorAlert">module:uiStatusActions~closeErrorAlert</a></li>
+
+                  <li><a href="module-store.html#~reducers">module:store~reducers.uiStatus</a></li>
+                </ul>
+
+                <div class="vertical-section">
+                  <h3 class="title"><span>Methods</span></h3>
+                  <div class="members">
+                    <div class="member">
+                      <h4 class="name" id=".handleClose">
+                        <a class="href-link" href="#.handleClose">#</a>
+
+                        <span class="tag">static</span>
+
+                        <span class="code-name"> handleClose<span class="signature">()</span><span class="type-signature"></span> </span>
+                      </h4>
+
+                      <div class="description">
+                        <p>Zavře errorové okno.</p>
+                      </div>
+
+                      <dl class="details">
+                        <p class="tag-source">
+                          <a href="components_GlobalErrorAlert.js.html" class="button">View Source</a>
+                          <span>
+                            <a href="components_GlobalErrorAlert.js.html">components/GlobalErrorAlert.js</a>,
+                            <a href="components_GlobalErrorAlert.js.html#line27">line 27</a>
+                          </span>
+                        </p>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
               </article>
             </section>
           </div>
@@ -250,7 +281,7 @@ export default function(state = initialState, action) {
 
     <footer class="footer">
       <div class="content has-text-centered">
-        <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Apr 30 2020 14:39:47 GMT+0200 (GMT+02:00)</p>
+        <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Apr 30 2020 14:39:48 GMT+0200 (GMT+02:00)</p>
         <p class="sidebar-created-by">
           <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
           <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>

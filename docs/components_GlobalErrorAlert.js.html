@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="favicon.ico" />
-    <title>Simple Flashcards Docs: redux/reducers/createDeckReducer.js</title>
+    <title>Simple Flashcards Docs: components/GlobalErrorAlert.js</title>
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -175,71 +175,84 @@
           <div class="content" id="main-content-wrapper">
             <header class="page-title">
               <p>Source</p>
-              <h1>redux/reducers/createDeckReducer.js</h1>
+              <h1>components/GlobalErrorAlert.js</h1>
             </header>
 
             <section>
               <article>
-                <pre class="prettyprint source linenums"><code>import { UPDATE_DECK_DATA, DELETE_DECK_DATA } from "../types";
+                <pre class="prettyprint source linenums"><code>import React, { Component } from "react";
+import PropTypes from "prop-types";
+
+// Material UI
+import Snackbar from "@material-ui/core/Snackbar";
+import MuiAlert from "@material-ui/lab/Alert";
+
+// Redux
+import { connect } from "react-redux";
+import { closeErrorAlert } from "../redux/actions/uiStatusActions";
 
 /**
- * @module createDeckReducer
- * @category ReduxReducers
- * @description Uchovává data o vytvářeném balíčku.
+ * @class GlobalErrorAlert
+ * @extends Component
+ * @category Components
+ * @classdesc Tento komponent zobrazuje vyskakovací okno s univerzální errorovou hláškou, pokud v aplikaci nastane nečekaná chyba, která není zachycena jiným komponentem.
+ *
+ * @requires uiStatusActions~closeErrorAlert
+ * @requires {@link module:store~reducers module:store~reducers.uiStatus}
  */
+export class GlobalErrorAlert extends Component {
+  constructor(props) {
+    super(props);
+    this.handleClose = this.handleClose.bind(this);
+  }
 
-/**
- * @type {Object} initialState
- * @description Původní stav reduceru.
- * @property {Object} initialState - Původní stav reduceru.
- * @property {string} initialState.deckName - Uchovává název balíčku.
- * @property {string} initialState.deckDescription - Uchovává popis balíčku.
- * @property {Object} initialState.deckImage - Uchovává obrázek balíčku.
- * @property {Array&lt;Object>} initialState.deckCards - Uchovává karty balíčku.
- * @property {string} initialState.imageUrl - Uchovává adresu obrázku balíčku.
- * @property {boolean} initialState.private - Uchovává informaci, zda je balíček veřejný či soukromý.
- */
-const initialState = {
-  deckName: "",
-  deckDescription: "",
-  deckImage: null,
-  deckCards: [],
-  imageUrl: null,
-  private: false
-};
+  /**
+   * @function handleClose
+   * @memberOf GlobalErrorAlert
+   * @description Zavře errorové okno.
+   */
+  handleClose = () => {
+    this.props.closeErrorAlert();
+  };
 
-/**
- * @function function
- * @description Mění stav reduceru.
- * @param {Object} state - Stav reduceru.
- * @param {Object} action - Akce, která vyvolává změnu v reduceru.
- * @returns {Object} Nový stav reduceru.
- */
-export default function(state = initialState, action) {
-  switch (action.type) {
-    case UPDATE_DECK_DATA:
-      return {
-        ...state,
-        deckName: action.payload.deckName,
-        deckDescription: action.payload.deckDescription,
-        deckImage: action.payload.deckImage,
-        deckCards: action.payload.deckCards,
-        imageUrl: action.payload.imageUrl,
-        private: action.payload.private
-      };
-    case DELETE_DECK_DATA:
-      return {
-        deckName: "",
-        deckDescription: "",
-        deckImage: null,
-        deckCards: [],
-        imageUrl: null,
-        private: false
-      };
-    default:
-      return state;
+  render() {
+    const {
+      uiStatus: { globalErrorAlertOpen }
+    } = this.props;
+    return (
+      &lt;React.Fragment>
+        {globalErrorAlertOpen &amp;&amp; (
+          &lt;React.Fragment>
+            &lt;Snackbar open={globalErrorAlertOpen} autoHideDuration={10000} onClose={this.handleClose}>
+              &lt;Alert onClose={this.handleClose} severity="error">
+                An unexpected error has occured. Please try again later.
+              &lt;/Alert>
+            &lt;/Snackbar>
+          &lt;/React.Fragment>
+        )}
+      &lt;/React.Fragment>
+    );
   }
 }
+
+function Alert(props) {
+  return &lt;MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
+GlobalErrorAlert.propTypes = {
+  closeErrorAlert: PropTypes.func.isRequired,
+  uiStatus: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  uiStatus: state.uiStatus
+});
+
+const mapActionsToProps = {
+  closeErrorAlert
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(GlobalErrorAlert);
 </code></pre>
               </article>
             </section>
